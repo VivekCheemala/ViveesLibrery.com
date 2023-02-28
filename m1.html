@@ -1,31 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vivees Library - PYTHON</title>
-
-    <style>
-
-    .column .video{
-    display: inline;
-    float: left;
-    padding: 50px 20px;
-    width: 400px;
-    height: 300px;
-    }
-   
-    </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vivees Library - Python</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+		
+		.column {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin: 20px 0;
+			padding: 0 10px;
+		}
+		
+		.video {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 10px;
+			padding: 10px;
+			border-radius: 10px;
+			background-color: #f2f2f2;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+			transition: box-shadow 0.3s ease-in-out;
+		}
+		
+		.video:hover {
+			box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+		}
+		
+		iframe {
+			border: none;
+			margin-top: 10px;
+			max-height: 300px;
+		}
+		
+		h1 {
+			margin-top: 10px;
+			font-size: 24px;
+			text-align: center;
+			color: #444;
+		}
+		
+		@media screen and (min-width: 768px) {
+			.column {
+				justify-content: space-between;
+			}
+			
+			.video {
+				width: calc(33.33% - 20px);
+			}
+		}
+		
+		@media screen and (min-width: 992px) {
+			.video {
+				width: calc(25% - 20px);
+			}
+		}
+	</style>
 </head>
 <body>
-    <div class="column">
-        
-        <div class="video">
-            <h1>Part - 01</h1>
-            <iframe src="https://youtube.com/embed/7wnove7K-ZQ" allowfullscreen width="100%" height="80%"></iframe>
-        </div>
-        
+	<div class="column">
+
+		<div class="video">
+			<h1>Part - 01</h1>
+			<iframe src="https://youtube.com/embed/7wnove7K-ZQ" allowfullscreen width="100%" height="80%"></iframe>
+		</div>
+		
         <div class="video">
             <h1>Part - 02</h1>
             <iframe src="https://youtube.com/embed/Tto8TS-fJQU" allowfullscreen width="100%" height="80%"></iframe>
@@ -166,12 +218,13 @@
             <iframe src="https://youtube.com/embed/SJzsNd7SM0g" allowfullscreen width="100%" height="80%"></iframe>
         </div>
 
-        <div class="video">
+        <div class="video">    
             <h1>Part - 30</h1>
             <iframe src="https://youtube.com/embed/XYwJKFB8DUk" allowfullscreen width="100%" height="80%"></iframe>
-        </div>
+        </div>    
+
+	</div>
 
 
-    </div>
 </body>
 </html>
